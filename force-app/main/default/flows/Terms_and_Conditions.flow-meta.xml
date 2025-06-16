@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <decisions>
+        <description>Check if user has previously accepted the terms and conditions.</description>
+        <name>Has_User_Accepted_Terms</name>
+        <label>Has User Accepted Terms</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>Terms_and_Conditions</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Accepted</defaultConnectorLabel>
+        <rules>
+            <name>Accepted</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$User.Accepted_Terms__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Accepted</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if user clicked the Accept Terms checkbox.</description>
+        <name>Terms_Checkbox_Checked</name>
+        <label>Terms Checkbox Checked</label>
+        <locationX>374</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Confirmation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Accept_Terms_and_Conditions</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Community_User</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <description>Flow used to have community users review and accept the Terms and Conditions for the Community. Accepting the terms unlocks Product access on the site.</description>
+    <environments>Default</environments>
+    <interviewLabel>Terms and Conditions {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <label>Terms and Conditions</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <description>Updates user record to indicate that they have rejected the terms and conditions. This is likely a redundant update since this field will be false if a user is seeing this screen.</description>
+        <name>Reject_Terms</name>
+        <label>Reject Terms</label>
+        <locationX>506</locationX>
+        <locationY>566</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Accepted_Terms__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>User</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates user to indicate that they have accepted the terms and conditions.</description>
+        <name>Update_Community_User</name>
+        <label>Update Community User</label>
+        <locationX>242</locationX>
+        <locationY>458</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Accepted_Terms__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>User</object>
+    </recordUpdates>
+    <runInMode>SystemModeWithSharing</runInMode>
+    <screens>
+        <description>Confirms if user actually wants to continue without accepting the terms and conditions.</description>
+        <name>Confirmation</name>
+        <label>Confirmation</label>
+        <locationX>506</locationX>
+        <locationY>458</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <backButtonLabel>Review Terms</backButtonLabel>
+        <connector>
+            <targetReference>Reject_Terms</targetReference>
+        </connector>
+        <fields>
+            <name>Confirmation_Header</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px;&quot;&gt;Are you sure?&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Confirmation_Body</name>
+            <fieldText>&lt;p&gt;If you do not accept the terms and conditions, you will not be able to view TechParts Products. You will be prompted to accept the terms when you try to view any Products.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Continue Without Accepting</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Displays Terms and Conditions and Prompts user to accept them before continuing.</description>
+        <name>Terms_and_Conditions</name>
+        <label>Terms and Conditions</label>
+        <locationX>374</locationX>
+        <locationY>242</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Terms_Checkbox_Checked</targetReference>
+        </connector>
+        <fields>
+            <name>Terms_And_Conditions_Body</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 18px; font-family: &amp;quot;Google Sans&amp;quot;, Roboto, Arial, sans-serif; color: rgb(0, 29, 53);&quot;&gt;By accessing or using the Site, you agree to be bound by these Terms and Conditions, which form a legally binding agreement between you and TechParts.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 18px; font-family: &amp;quot;Google Sans&amp;quot;, Roboto, Arial, sans-serif; color: rgb(0, 29, 53);&quot;&gt;You are required to accept these terms in order to access TechParts product catalog. You can accept these terms at any time when logging in or from the Products Catalog page.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Accept_Terms_and_Conditions</name>
+            <dataType>Boolean</dataType>
+            <defaultValue>
+                <booleanValue>false</booleanValue>
+            </defaultValue>
+            <fieldText>Accept Terms and Conditions</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Continue</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Has_User_Accepted_Terms</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

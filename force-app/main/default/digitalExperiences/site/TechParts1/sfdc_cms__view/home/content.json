@@ -1,0 +1,130 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Home",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "{\"url\":\"/cms/delivery/media/MCG5JNSJCTOFH4NKMWTL7TB224TM\",\"contentKey\":\"MCG5JNSJCTOFH4NKMWTL7TB224TM\",\"altText\":\"\",\"contentType\":\"\",\"bgPosition\":\"center center\",\"bgSizeOrRepeat\":\"/cover\"}",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"4cb6af29-6f96-4c17-876b-f63192e4d373\",\"columns\":[{\"UUID\":\"cdfdae67-2dca-44d8-b25a-cd3d17403d99\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><strong style=\"color: rgb(255, 255, 255); font-size: 72px; font-family: sans-serif;\"><span class=\"ql-cursor\">﻿</span>Welcome to TechParts</strong></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "9e6fffe1-142f-4841-8d76-1b2085c53b3a",
+              "type" : "component"
+            } ],
+            "id" : "cdfdae67-2dca-44d8-b25a-cd3d17403d99",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "4cb6af29-6f96-4c17-876b-f63192e4d373",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"4bca1522-2421-4bf3-87c0-305e02c147fb\",\"columns\":[{\"UUID\":\"c4e07567-919a-49a3-83ed-8d4aa9b0e06a\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "40px",
+                    "left" : "",
+                    "right" : "",
+                    "top" : ""
+                  }
+                },
+                "imageInfos" : "",
+                "richTextValue" : "<p><span style=\"font-family: sans-serif; font-size: 22px;\">TechParts has a wide variety of high quality products. Check out our products page to see everything we offer!</span></p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "9009a68b-dfc9-4f27-b35f-f600f7cdb6c0",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "",
+                    "left" : "",
+                    "right" : "",
+                    "top" : ""
+                  }
+                },
+                "size" : "large",
+                "stretch" : "standard",
+                "text" : "Explore Products",
+                "type" : "primary",
+                "url" : "{\"linkInfo\":{\"pageReference\":{\"type\":\"standard__objectPage\",\"attributes\":{\"actionName\":\"list\",\"objectApiName\":\"Product2\"},\"state\":{\"filterName\":\"AllProducts\"}}}}"
+              },
+              "definition" : "dxp_base:button",
+              "id" : "6a961652-af31-42a4-98ff-990b294f7797",
+              "type" : "component"
+            } ],
+            "id" : "c4e07567-919a-49a3-83ed-8d4aa9b0e06a",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "4bca1522-2421-4bf3-87c0-305e02c147fb",
+          "type" : "component"
+        } ],
+        "id" : "30bd86fe-8c8c-4707-9a65-1d195c2bc269",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Home",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "af06be94-3c9f-4f00-8d2a-f860cd15364f",
+          "type" : "component"
+        } ],
+        "id" : "ceeba095-0827-4bfe-947d-d9eb0afd566c",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "19bf3783-2b96-4b2a-83fb-11dd00be1fb7",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "home"
+  },
+  "urlName" : "home"
+}

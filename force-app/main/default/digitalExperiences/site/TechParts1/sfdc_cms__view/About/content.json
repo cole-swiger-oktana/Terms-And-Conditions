@@ -1,0 +1,70 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "About",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"4167b129-de67-44fe-9c87-485608becc0a\",\"columns\":[{\"UUID\":\"2c7cd8bf-2fae-4753-bbe0-b81183c9701b\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<p><span style=\"font-family: sans-serif; font-size: 36px;\">About TechParts</span></p><p><br></p><p><br></p><p><span style=\"font-size: 24px; font-family: sans-serif;\">At TechParts, we specialize in providing cutting-edge technology solutions to meet the needs of modern homes and businesses. From everyday essentials to advanced computer components, we offer a wide range of reliable products designed to make life easier, smarter, and more efficient. Whether you're upgrading your workspace or outfitting your home, our mission is to deliver the tools that keep you connected, productive, and comfortable.</span></p><p><br></p><p><span style=\"font-size: 24px; font-family: sans-serif;\">Founded on the belief that great technology should be accessible to everyone, TechParts combines trusted brands, expert support, and a seamless shopping experience—all in one place. We are passionate about helping our customers find the right solutions for their needs, and our team is committed to delivering exceptional service every step of the way. With TechParts, you're not just buying parts—you're building possibilities.</span></p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "0431d4b2-384d-42f5-b964-fb8400a57c40",
+              "type" : "component"
+            } ],
+            "id" : "2c7cd8bf-2fae-4753-bbe0-b81183c9701b",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "4167b129-de67-44fe-9c87-485608becc0a",
+          "type" : "component"
+        } ],
+        "id" : "44ac6175-f0b8-45e9-b57b-44bb070b8825",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "About",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "070a2286-a275-4f74-81b9-46d4cf07fe7c",
+          "type" : "component"
+        } ],
+        "id" : "0a8d25b1-d554-43c5-ad35-6c443e992301",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "57d6b41f-03c2-4580-8298-c5c9d6c10689",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-about"
+  },
+  "urlName" : "about"
+}

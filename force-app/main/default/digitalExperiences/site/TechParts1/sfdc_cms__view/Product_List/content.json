@@ -1,0 +1,304 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Product List",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"3b0f735d-6346-4cc6-a677-97b1429dd3a6\",\"columns\":[{\"UUID\":\"be7f15ee-dab7-4781-89ef-46afdce9455d\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "20px",
+                    "left" : "",
+                    "right" : "",
+                    "top" : ""
+                  }
+                },
+                "imageInfos" : "",
+                "richTextValue" : "<p><strong style=\"font-size: 36px; font-family: sans-serif;\">TechParts Product Catalog</strong></p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "633497b5-18b9-4356-beec-27d7d06e945d",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "cellPadding" : "{\"top\":\"16px\",\"right\":\"16px\",\"bottom\":\"16px\",\"left\":\"16px\"}",
+                "dividerBorderColor" : "#E5E5E5",
+                "dividerBorderWeight" : "1",
+                "headerBackgroundColor" : "#FFFFFF",
+                "headerBorderColor" : "#E5E5E5",
+                "headerBorderWeight" : "1",
+                "headerSectionLineSeparator" : "",
+                "recordListData" : "{!Item.recordListData}",
+                "rowHoverColor" : "#F3F3F3",
+                "showHeader" : "true",
+                "showObjectIcon" : true,
+                "showPagination" : true,
+                "showSearch" : true,
+                "showStatus" : true,
+                "showTitle" : true,
+                "statusColor" : "#5C5C5C",
+                "statusSectionLineSeparator" : "",
+                "statusTextDecoration" : "{}",
+                "statusTextDisplayInfo" : "{\"textStyle\":\"body-small\",\"headingTag\":\"p\",\"enableOverride\":false}",
+                "tableBackgroundColor" : "#FFFFFF",
+                "tableBorderColor" : "#E5E5E5",
+                "tableBorderWeight" : "1",
+                "tableTextStyle" : "{\"textStyle\":\"body-regular\",\"headingTag\":\"p\",\"enableOverride\":false}",
+                "titleColor" : "#5C5C5C",
+                "titleSectionLineSeparator" : "",
+                "titleTextDecoration" : "{\"bold\":true}",
+                "titleTextDisplayInfo" : "{\"textStyle\":\"heading-medium\",\"headingTag\":\"h3\",\"enableOverride\":false}"
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : {
+                    "paginatorAttributes" : "{\"nested\":{\"componentName\":\"dxp_content_layout:paginatorStandard\",\"attributes\":{\"prevButtonLabel\":\"Previous\",\"nextButtonLabel\":\"Next\",\"nextButtonTextDecoration\":\"{}\",\"prevButtonTextDecoration\":\"{}\",\"nextButtonStyle\":\"primary\",\"prevButtonStyle\":\"secondary\",\"size\":\"standard\",\"width\":\"standard\",\"verticalPadding\":\"none\",\"horizontalAlignment\":\"right\",\"disableAutoHidden\":false,\"buttonSpacing\":\"xx-small\"}}}",
+                    "variant" : "standard"
+                  },
+                  "children" : [ {
+                    "children" : [ {
+                      "attributes" : { },
+                      "definition" : "dxp_page_layout:placeHolder",
+                      "id" : "3819693e-f542-4d21-9ea6-4bab88c192f7",
+                      "type" : "component"
+                    } ],
+                    "id" : "128b5de4-4796-4031-b265-e4748413b428",
+                    "name" : "placeholder",
+                    "title" : "placeholder",
+                    "type" : "region"
+                  } ],
+                  "definition" : "dxp_content_layout:paginator2",
+                  "id" : "5a34ee57-ac70-4db4-8713-4a4af49d45a7",
+                  "type" : "component"
+                } ],
+                "id" : "9ebe7737-b744-431b-bede-4b1e0374e287",
+                "name" : "pagination",
+                "title" : "pagination",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_content_layout:recordListLayout",
+              "id" : "6858e9ba-bad7-45fd-96bb-c964a6320141",
+              "type" : "component",
+              "dataProviders" : [ {
+                "definition" : "sfdc_cms__recordListLayoutDataProvider",
+                "sfdcExpressionKey" : "Item",
+                "attributes" : {
+                  "listViewApiName" : "AllProducts",
+                  "objectApiName" : "Product2",
+                  "pageSize" : 10
+                }
+              } ]
+            }, {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "10px",
+                    "left" : "0px",
+                    "right" : "0px",
+                    "top" : "0px"
+                  }
+                },
+                "imageInfos" : "",
+                "richTextValue" : "<p><span style=\"font-size: 20px; font-family: sans-serif;\">You must log in and accept the terms and conditions to view TechParts products. Please log in, then accept the terms if prompted.</span></p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "8792e5e9-c783-426b-b33e-e045c8567c48",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "10px",
+                    "left" : "",
+                    "right" : "",
+                    "top" : ""
+                  }
+                },
+                "imageInfos" : "",
+                "richTextValue" : "<p><span style=\"font-family: sans-serif; font-size: 20px;\">You must accept the terms and conditions to view TechParts products. Please accept the terms then </span><strong style=\"font-family: sans-serif; font-size: 20px;\"><em>refresh</em></strong><span style=\"font-family: sans-serif; font-size: 20px;\"> the page.</span></p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "d86d04ed-0b9d-4787-bc5c-25778e05e807",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "color" : "rgb(0, 0, 0)",
+                "lineStyle" : "solid",
+                "size" : 5,
+                "width" : 100
+              },
+              "definition" : "dxp_base:horizontalLine",
+              "id" : "ce074400-601b-4949-8adc-5daf78188740",
+              "type" : "component"
+            } ],
+            "id" : "be7f15ee-dab7-4781-89ef-46afdce9455d",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "3b0f735d-6346-4cc6-a677-97b1429dd3a6",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"09a12743-8917-4248-85d4-3b15ccdcefb3\",\"columns\":[{\"UUID\":\"2766e6ac-6c71-47ca-9b6d-a18589a12407\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "",
+                    "left" : "",
+                    "right" : "",
+                    "top" : "20px"
+                  }
+                },
+                "flowName" : "{\"flowName\":\"Terms_and_Conditions\",\"flowLabel\":\"Terms and Conditions\"}"
+              },
+              "definition" : "dxp_flow:flow",
+              "id" : "8d1551da-ece5-4a02-9b52-56e13147082f",
+              "type" : "component"
+            } ],
+            "id" : "2766e6ac-6c71-47ca-9b6d-a18589a12407",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "09a12743-8917-4248-85d4-3b15ccdcefb3",
+          "type" : "component"
+        } ],
+        "id" : "532c387e-6055-4240-9d7a-3b639912bd50",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "e942ecc4-0fef-418d-8cb1-52289223c97d",
+          "type" : "component"
+        } ],
+        "id" : "2f72ef53-b04a-47fc-a66d-f9805f74483e",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "5b164fbe-d7ea-4506-90e2-51d28962e0dc",
+      "type" : "component"
+    },
+    "contentOperations" : {
+      "operations" : [ {
+        "targetId" : "6858e9ba-bad7-45fd-96bb-c964a6320141",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "fabfdba5-27b1-4323-8ccc-af540b95b02f",
+          "description" : "",
+          "criteriaType" : "AllCriteriaMatch",
+          "expressionCriteria" : [ {
+            "resource" : "User.isGuest",
+            "operator" : "Equal",
+            "value" : false,
+            "criterionNumber" : 1
+          }, {
+            "resource" : "User.Record.Accepted_Terms__c",
+            "operator" : "Equal",
+            "value" : true,
+            "criterionNumber" : 2
+          } ]
+        }
+      }, {
+        "targetId" : "d86d04ed-0b9d-4787-bc5c-25778e05e807",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "34266f2e-8833-4fe9-bb98-d5a3d46dfba0",
+          "description" : "",
+          "criteriaType" : "AllCriteriaMatch",
+          "expressionCriteria" : [ {
+            "resource" : "User.isGuest",
+            "operator" : "Equal",
+            "value" : false,
+            "criterionNumber" : 1
+          }, {
+            "resource" : "User.Record.Accepted_Terms__c",
+            "operator" : "Equal",
+            "value" : false,
+            "criterionNumber" : 2
+          } ]
+        }
+      }, {
+        "targetId" : "8792e5e9-c783-426b-b33e-e045c8567c48",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "944c1839-3e69-4660-8d27-c7d1c0a807ff",
+          "description" : "",
+          "criteriaType" : "AllCriteriaMatch",
+          "expressionCriteria" : [ {
+            "resource" : "User.isGuest",
+            "operator" : "Equal",
+            "value" : true,
+            "criterionNumber" : 1
+          } ]
+        }
+      }, {
+        "targetId" : "8d1551da-ece5-4a02-9b52-56e13147082f",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "28c3b183-0140-435a-a7e7-fb218774196e",
+          "description" : "",
+          "criteriaType" : "AllCriteriaMatch",
+          "expressionCriteria" : [ {
+            "resource" : "User.isGuest",
+            "operator" : "Equal",
+            "value" : false,
+            "criterionNumber" : 1
+          }, {
+            "resource" : "User.Record.Accepted_Terms__c",
+            "operator" : "Equal",
+            "value" : false,
+            "criterionNumber" : 2
+          } ]
+        }
+      } ]
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "list-01t"
+  },
+  "urlName" : "product-list"
+}

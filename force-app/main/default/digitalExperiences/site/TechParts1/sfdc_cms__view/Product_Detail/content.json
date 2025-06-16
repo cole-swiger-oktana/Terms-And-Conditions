@@ -1,0 +1,207 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Product Detail",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"c7db65c7-ab4d-4ab6-b28b-6218bed6d0ae\",\"columns\":[{\"UUID\":\"01585c8f-a299-4aab-9456-81193f839b08\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "imageInfos" : "",
+                "richTextValue" : "<p><span style=\"font-family: sans-serif; font-size: 36px;\">Product Information</span></p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "d366ef6b-f265-477d-b912-066b037ebe78",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "layout" : "{!Item._layout}",
+                "mainTitlePaddingHorizontal" : "none",
+                "mainTitlePaddingVertical" : "none",
+                "mainTitleText" : "{!Item.Name}",
+                "mainTitleTextDisplayInfo" : "{\"textStyle\":\"heading-large\",\"headingTag\":\"h2\",\"enableOverride\":false}",
+                "metadata" : "{!Item._metadata._context}",
+                "recordIdFromDataProvider" : "{!Item.Id}",
+                "showTitle" : true
+              },
+              "children" : [ {
+                "children" : [ {
+                  "attributes" : { },
+                  "definition" : "dxp_page_layout:placeHolder",
+                  "id" : "1b4d9d26-b080-4da2-ad1d-74d176d2819f",
+                  "type" : "component"
+                } ],
+                "id" : "ced4773b-d897-4100-b875-f7457e1441f0",
+                "name" : "placeholder",
+                "title" : "placeholder",
+                "type" : "region"
+              } ],
+              "definition" : "dxp_records:detailPanel",
+              "id" : "02caef8f-6b1d-4943-8848-46e8da55c654",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "40px",
+                    "left" : "",
+                    "right" : "",
+                    "top" : ""
+                  }
+                },
+                "imageInfos" : "",
+                "richTextValue" : "<p><span style=\"font-family: sans-serif; font-size: 20px;\">You must log in and accept the terms and conditions to view this product.</span></p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "0f100961-a06e-44b4-bd5a-277e7c092b8e",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "40px",
+                    "left" : "",
+                    "right" : "",
+                    "top" : ""
+                  }
+                },
+                "imageInfos" : "",
+                "richTextValue" : "<p><span style=\"font-size: 20px; font-family: sans-serif;\">You must accept the terms and conditions to view this product.</span></p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "2c65aeb0-e5e8-4c59-8fb4-2a0b9989e2b8",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "alignment" : "center",
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "",
+                    "left" : "",
+                    "right" : "",
+                    "top" : ""
+                  }
+                },
+                "size" : "standard",
+                "stretch" : "standard",
+                "text" : "Return to Product Listing",
+                "type" : "primary",
+                "url" : "{\"linkInfo\":{\"pageReference\":{\"type\":\"standard__objectPage\",\"attributes\":{\"actionName\":\"list\",\"objectApiName\":\"Product2\"},\"state\":{\"filterName\":\"AllProducts\"}}}}"
+              },
+              "definition" : "dxp_base:button",
+              "id" : "e5eabf43-87a9-42ff-b65d-3dfa3d193abf",
+              "type" : "component"
+            } ],
+            "id" : "01585c8f-a299-4aab-9456-81193f839b08",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "c7db65c7-ab4d-4ab6-b28b-6218bed6d0ae",
+          "type" : "component"
+        } ],
+        "id" : "b4b0ec78-dd42-4f23-a21f-aefd58eda5c3",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "{!Record._Object}: {!Record._Title}",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "ac33f2e2-f563-44bf-a28b-28e61b6100b2",
+          "type" : "component"
+        } ],
+        "id" : "5353bfe5-14ee-4608-af7c-d3e8e25d27aa",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "27b849ec-6b58-47f2-a5b1-3e7e85f60df7",
+      "type" : "component"
+    },
+    "contentOperations" : {
+      "operations" : [ {
+        "targetId" : "02caef8f-6b1d-4943-8848-46e8da55c654",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "ca1ea85b-f819-4add-843b-02241cdc0714",
+          "description" : "",
+          "criteriaType" : "AllCriteriaMatch",
+          "expressionCriteria" : [ {
+            "resource" : "User.isGuest",
+            "operator" : "Equal",
+            "value" : false,
+            "criterionNumber" : 1
+          }, {
+            "resource" : "User.Record.Accepted_Terms__c",
+            "operator" : "Equal",
+            "value" : true,
+            "criterionNumber" : 2
+          } ]
+        }
+      }, {
+        "targetId" : "0f100961-a06e-44b4-bd5a-277e7c092b8e",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "e5c1ef82-3c96-48d8-8661-3592fae86c04",
+          "description" : "",
+          "criteriaType" : "AllCriteriaMatch",
+          "expressionCriteria" : [ {
+            "resource" : "User.isGuest",
+            "operator" : "Equal",
+            "value" : true,
+            "criterionNumber" : 1
+          } ]
+        }
+      }, {
+        "targetId" : "2c65aeb0-e5e8-4c59-8fb4-2a0b9989e2b8",
+        "isHiddenOnOperationSuccess" : false,
+        "isActive" : true,
+        "rule" : {
+          "name" : "e913b294-9381-4a0c-a1f3-b066c778788b",
+          "description" : "",
+          "criteriaType" : "AllCriteriaMatch",
+          "expressionCriteria" : [ {
+            "resource" : "User.isGuest",
+            "operator" : "Equal",
+            "value" : false,
+            "criterionNumber" : 1
+          }, {
+            "resource" : "User.Record.Accepted_Terms__c",
+            "operator" : "Equal",
+            "value" : false,
+            "criterionNumber" : 2
+          } ]
+        }
+      } ]
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "detail-01t"
+  },
+  "urlName" : "product-detail"
+}

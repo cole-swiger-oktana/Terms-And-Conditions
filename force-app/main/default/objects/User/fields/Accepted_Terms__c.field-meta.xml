@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accepted_Terms__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates if community user has accepted the terms and conditions. This determines if they are prompted to accept the terms when they log in and whether they can see the product catalog.</description>
+    <label>Accepted Terms</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>
